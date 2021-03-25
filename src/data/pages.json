@@ -1,0 +1,27 @@
+[
+  {
+    "img": "../assets/images/ECPodCrowdControlv2500x500.jpg",
+    "alt": "Techno girls at a festival",
+    "name": "Techno",
+    "button": "View Page"
+  },
+  {
+    "img": "../assets/images/funk400hi.jpg",
+    "alt": "Funk drummer playing funk drums",
+    "name": "Funk",
+    "button": "View Page"
+  },
+  {
+    "img": "../assets/images/SushiDog400vhsfw.jpg",
+    "alt": "Mini Doggos picked up by chopsticks",
+    "name": "DJ Downloads",
+    "button": "View Page"
+  },
+  {
+    "img": "../assets/images/Housev4-(fish-eye,_noTitle500x500).jpg",
+    "alt": "Fisheye view of people at a house festival",
+    "name": "House",
+    "button": "View Page"
+  }
+]
+
