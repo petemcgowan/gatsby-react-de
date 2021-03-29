@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
 import {FaBars} from 'react-icons/fa'
@@ -35,7 +35,7 @@ const Header = () => {
 export default Header
 
 const Nav = styled.nav`
-  background: red;
+  background: transparent;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -79,7 +79,7 @@ const NavMenu = styled.div`
   }
 `
 const NavBtn = styled.div`
-  display:flex;
+  display: flex;
   align-items: center;
   margin-right: 24px;
 
