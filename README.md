@@ -1,3 +1,7 @@
+---
+
+<!-- <Pete: This is me creating from the BD template -->
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
