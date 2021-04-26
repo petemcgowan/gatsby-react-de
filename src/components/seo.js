@@ -5,12 +5,12 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
+import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+const SEO = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,7 +18,9 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
-            author
+            social {
+              twitter
+            }
           }
         }
       }
@@ -29,11 +31,7 @@ function SEO({ description, lang, meta, title }) {
   const defaultTitle = site.siteMetadata?.title
 
   return (
-
     <Helmet
-      // Pete note: Roboto wasn't loading so I added the following line
-      link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"
-
       htmlAttributes={{
         lang,
       }}
@@ -62,7 +60,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: site.siteMetadata?.social?.twitter || ``,
         },
         {
           name: `twitter:title`,
