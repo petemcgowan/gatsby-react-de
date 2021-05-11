@@ -1,0 +1,13 @@
+.Podcast {
+  text-align: left;
+  display: flex;
+  justify-content: left;
+  margin: 5px auto;
+  padding: 0px 0px 5px 5px;
+}
+
+
+.Podcast td{
+  margin: 5px auto;
+  padding: 0px 0px 5px 5px;
+}
