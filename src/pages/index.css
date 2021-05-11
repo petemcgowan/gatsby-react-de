@@ -24,7 +24,10 @@ body {
   width: 100%;
   filter: none;
   /* this is how round the img circles are */
-  border-radius: 35%;
+  border-radius: 35%  !important;
+  /* ...which apparently exposes a Gatsby bug so I have to include this line for production*/
+  overflow: hidden;
+
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
   transition: 0.4s filter ease;
 }
