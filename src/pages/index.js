@@ -7,7 +7,6 @@ import Social from "../components/Social"
 import NavbarDE from "../components/NavbarDE"
 import "bootstrap/dist/css/bootstrap.min.css"
 
-// import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./index.css"
@@ -15,12 +14,12 @@ import "./index.css"
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
+  const imageWidth = 280
 
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
         <SEO title="Diplomatic Enjoy" />
-        {/* <Bio /> */}
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
           directory you specified for the "gatsby-source-filesystem" plugin in
@@ -33,16 +32,14 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location}>
       <SEO title="Diplomatic Enjoy" />
-      {/* <Bio /> */}
       <NavbarDE />
-
       <div className="row">
         <div className="Pages col-lg-5 text-center">
           <Link to="/house">
             <StaticImage
               src="../images/Housev4-(fish-eye,_noTitle500x500).jpg"
               alt="Fisheye view of people at a house festival"
-              width="280"
+              width={imageWidth}
             />
             <h3 className="mt-2 underline">house</h3>
           </Link>
@@ -52,7 +49,7 @@ const BlogIndex = ({ data, location }) => {
             <StaticImage
               src="../images/ECPodCrowdControlv2500x500.jpg"
               alt="Techno ravers at a festival"
-              width="280"
+              width={imageWidth}
             />
             <h3 className="mt-2 underline">techno</h3>
           </Link>
@@ -62,7 +59,7 @@ const BlogIndex = ({ data, location }) => {
             <StaticImage
               src="../images/funk400hi.jpg"
               alt="Funk drummer playing funk drums"
-              width="280"
+              width={imageWidth}
             />
             <h3 className="mt-2 underline">funk</h3>
           </Link>
@@ -72,13 +69,12 @@ const BlogIndex = ({ data, location }) => {
             <StaticImage
               src="../images/SushiDog400vhsfw.jpg"
               alt="Mini Doggos picked up by chopsticks"
-              width="280"
+              width={imageWidth}
             />
             <h3 className="mt-2 underline">downloads</h3>
           </Link>
         </div>
       </div>
-
       <Social />
     </Layout>
   )
