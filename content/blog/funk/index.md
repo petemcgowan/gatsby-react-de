@@ -12,7 +12,7 @@ techno: false
 facts:
   [
     {
-      source: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/720023266&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+      source: "https://www.youtube.com/embed/zYQY1GIIRoA",
       name: "name",
       height: 160,
     },
@@ -45,12 +45,6 @@ facts:
       source: "https://www.youtube.com/embed/stoRHlAhETs",
       name: "name",
       height: 160,
-    },
-
-    {
-      source: "https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2Fdiplomaticenjoy%2Funderground-funk-blackbyrds-singing%2F",
-      name: "name",
-      height: 120,
     },
   ]
 ---
