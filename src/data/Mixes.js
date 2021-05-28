@@ -5,6 +5,11 @@ export const Mixes = [
     link: "https://bit.ly/3rRvk6q",
   },
   {
+    artist: "The Police/Alex Bau",
+    song: "Voices Inside My Head",
+    link: "https://bit.ly/3oriUka",
+  },
+  {
     artist: "BT Express",
     song: "Do It till youre satisfied (rmx)",
     link: "http://bit.ly/2sWYWoJ",
@@ -18,6 +23,11 @@ export const Mixes = [
     artist: "Midnight Movers",
     song: " Party (rmx)",
     link: "http://bit.ly/2PmztN6",
+  },
+  {
+    artist: "Aquarian Dream",
+    song: " You're a Star (rmx)",
+    link: "https://bit.ly/3e9z90w",
   },
   {
     artist: "DJ Shadow",
@@ -81,4 +91,4 @@ export const Mixes = [
     song: "Be Thankful For What You Got (edit)",
     link: "http://bit.ly/2AlfszM",
   },
-];
+]
