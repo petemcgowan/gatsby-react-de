@@ -33,49 +33,55 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location}>
       <SEO title="Diplomatic Enjoy" />
       <NavbarDE />
-      <div className="row">
-        <div className="Pages col-lg-5 text-center">
-          <Link to="/house">
-            <StaticImage
-              src="../images/Housev4-(fish-eye,_noTitle500x500).jpg"
-              alt="Fisheye view of people at a house festival"
-              width={imageWidth}
-            />
-            <h3 className="mt-2 underline">house</h3>
-          </Link>
+      <div className="container">
+        <div className="row">
+          <div className="Pages col-md-3 text-center">
+            <Link to="/house">
+              <StaticImage
+                src="../images/Housev4-(fish-eye,_noTitle500x500).jpg"
+                alt="Fisheye view of people at a house festival"
+                width={imageWidth}
+              />
+              <h3 className="mt-2 underline">house</h3>
+            </Link>
+          </div>
+          <div className="Pages col-md-3 text-center">
+            <Link to="/techno">
+              <StaticImage
+                src="../images/ECPodCrowdControlv2500x500.jpg"
+                alt="Techno ravers at a festival"
+                width={imageWidth}
+              />
+              <h3 className="mt-2 underline">techno</h3>
+            </Link>
+          </div>
+          <div className="Pages col-md-3 text-center">
+            <Link to="/funk">
+              <StaticImage
+                src="../images/funk400hi.jpg"
+                alt="Funk drummer playing funk drums"
+                width={imageWidth}
+              />
+              <h3 className="mt-2 underline">funk</h3>
+            </Link>
+          </div>
+          <div className="Pages col-md-3 text-center">
+            <Link to="/downloads">
+              <StaticImage
+                src="../images/SushiDog400vhsfw.jpg"
+                alt="Mini Doggos picked up by chopsticks"
+                width={imageWidth}
+              />
+              <h3 className="mt-2 underline">downloads</h3>
+            </Link>
+          </div>
         </div>
-        <div className="Pages col-lg-5 text-center">
-          <Link to="/techno">
-            <StaticImage
-              src="../images/ECPodCrowdControlv2500x500.jpg"
-              alt="Techno ravers at a festival"
-              width={imageWidth}
-            />
-            <h3 className="mt-2 underline">techno</h3>
-          </Link>
-        </div>
-        <div className="Pages col-lg-5 text-center">
-          <Link to="/funk">
-            <StaticImage
-              src="../images/funk400hi.jpg"
-              alt="Funk drummer playing funk drums"
-              width={imageWidth}
-            />
-            <h3 className="mt-2 underline">funk</h3>
-          </Link>
-        </div>
-        <div className="Pages col-lg-5 text-center">
-          <Link to="/downloads">
-            <StaticImage
-              src="../images/SushiDog400vhsfw.jpg"
-              alt="Mini Doggos picked up by chopsticks"
-              width={imageWidth}
-            />
-            <h3 className="mt-2 underline">downloads</h3>
-          </Link>
+        <div className="footer">
+          <div className="col-md">
+            <Social />
+          </div>
         </div>
       </div>
-      <Social />
     </Layout>
   )
 }
