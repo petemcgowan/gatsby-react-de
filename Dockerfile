@@ -8,7 +8,7 @@ FROM node:14.3.0-alpine as build
 
 WORKDIR /app
 COPY package*.json ./
-COPY gatsby*.json ./
+#COPY gatsby*.json ./
 #RUN apk add --no-cache \
 #  autoconf \
 #  aclocal
