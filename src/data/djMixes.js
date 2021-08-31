@@ -96,4 +96,11 @@ export const djMixes = [
     link:
       "https://dts.podtrac.com/redirect.mp3/https://undergroundpodcast.s3.us-east-2.amazonaws.com/192/UHFT-11-Upbeat_Neo_Vinyl_Swimming_Downstream_Underground_House_EP11.mp3",
   },
-];
+
+  {
+    artist: "Underground Techno",
+    song: "2021 Best Techno Festivals DJ Soundtrack - EP04",
+    link:
+      "https://dts.podtrac.com/redirect.mp3/electriccolour.club/mp3/PTU-04-Underground_Techno_2021_Best_Techno_Festivals_EP04.mp3",
+  },
+]
