@@ -12,19 +12,15 @@ techno: true
 facts:
   [
     {
+      source: "https://www.youtube.com/embed/R7ezWNc6zaY",
+      name: "name",
+      height: 300,
+    },
+
+    {
       source: "https://open.spotify.com/embed?uri=spotify:user:1163531592:playlist:6iqxF99IunM1sOPdqvQ3Q7",
       name: "name",
       height: 220,
-    },
-    {
-      source: "https://www.youtube.com/embed/o3FmrXalxJU",
-      name: "name",
-      height: 300,
-    },
-    {
-      source: "https://www.youtube.com/embed/lrjru5USh7Y",
-      name: "name",
-      height: 300,
     },
 
     {
@@ -34,9 +30,9 @@ facts:
     },
 
     {
-      source: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/697938109&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true",
+      source: "https://www.youtube.com/embed/lrjru5USh7Y",
       name: "name",
-      height: 160,
+      height: 300,
     },
   ]
 ---
