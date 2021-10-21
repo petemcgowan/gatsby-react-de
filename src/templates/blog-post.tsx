@@ -1,23 +1,50 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import "./blog-post.css"
-import Podcast from "../components/Podcast.js"
+import Podcast from "../components/Podcast"
 import DownloadsPage from "../components/DownloadsPage"
-import PodcastTechno from "../components/PodcastTechno.js"
+// import PodcastTechno from "../components/PodcastTechno"
 import Social from "../components/Social"
 import NavbarDE from "../components/NavbarDE"
+
+import { podcasts } from "../data/podcasts";
+import {PodcastType} from "../interfaces/PodcastInterfaces";
+
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const BlogPostTemplate = ({ data, location }) => {
+
+import {FactsType} from "../interfaces/RoutesInterfaces";
+
+
+interface Props {
+  data: {
+    markdownRemark: any
+    site: {
+      siteMetadata: {
+        title: string
+      }
+    }
+  }
+  pageContext: any
+}
+
+
+const BlogPostTemplate = ({ data, pageContext }: Props)  => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
+  const { previous, next } = pageContext
   let Page = post.frontmatter
 
+  let podcastInfo:PodcastType = podcasts[0]; // default podcast is house
+  if (Page.techno) { // what podcast should be shown
+    podcastInfo = podcasts[1];
+    console.log("podcasts[1]:" + JSON.stringify(podcasts[1]));
+  }
+
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout  title={siteTitle}>
       <NavbarDE />
       <SEO
         title={post.frontmatter.title}
@@ -49,7 +76,7 @@ const BlogPostTemplate = ({ data, location }) => {
 
           <h1>{Page.title}</h1>
           <ul className="list-group list-group-flush">
-            {Page.facts.map((fact, i) => (
+            {Page.facts.map((fact:FactsType, i:number) => (
               <li className="list-group-item" key={i}>
                 <iframe
                   src={fact.source}
@@ -57,8 +84,8 @@ const BlogPostTemplate = ({ data, location }) => {
                   height={fact.height}
                   title={fact.name}
                   name={fact.name}
-                  frameborder="0"
-                  allowtransparency="true"
+                  // frameborder="0"
+                  // allowtransparency="true"
                   allow="encrypted-media"
                 ></iframe>
               </li>
@@ -67,8 +94,9 @@ const BlogPostTemplate = ({ data, location }) => {
           <div className="Downloads">
             {Page.remixDownloads ? <DownloadsPage /> : ""}
           </div>
-          <div className="Podcast">{!Page.techno && <Podcast />}</div>
-          <div className="Podcast">{Page.techno && <PodcastTechno />}</div>
+          <div className="Podcast">{<Podcast podcastInfo={podcastInfo}  />}</div>
+          {/* <div>{!Page.techno && <Podcast />}</div>
+          <div>{Page.techno && <PodcastTechno />}</div> */}
 
           {/* </div> */}
         </section>
@@ -158,3 +186,6 @@ export const pageQuery = graphql`
     }
   }
 `
+
+
+

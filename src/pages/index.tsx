@@ -1,3 +1,5 @@
+
+
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
@@ -11,14 +13,27 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./index.css"
 
-const BlogIndex = ({ data, location }) => {
+
+interface Props {
+  data: {
+    allMarkdownRemark: any
+    site: {
+      siteMetadata: {
+        title: string
+      }
+    }
+  }
+}
+
+const BlogIndex = ({ data }: Props) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
   const imageWidth = 280
 
+
   if (posts.length === 0) {
     return (
-      <Layout location={location} title={siteTitle}>
+      <Layout  title={siteTitle}>
         <SEO title="Diplomatic Enjoy" />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
@@ -30,7 +45,7 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location}>
+    <Layout  title={siteTitle}>
       <SEO title="Diplomatic Enjoy" />
       <NavbarDE />
       <div className="container">
@@ -192,3 +207,5 @@ const ProductInfo = styled.div`
 //   font-size: 1rem;
 //   margin-left: 0.5rem;
 // `
+
+
