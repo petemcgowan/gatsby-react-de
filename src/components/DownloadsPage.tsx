@@ -1,19 +1,19 @@
 import React, { useState } from "react"
-import MixTable from "./MixTable.js"
+import MixTable from "./MixTable"
 import { Mixes } from "../data/Mixes"
 import { djMixes } from "../data/djMixes"
-import SearchBar from "./SearchBar.js"
+import SearchBar from "./SearchBar"
 import "./Downloads.css"
 
 const DownloadsPage = () => {
   const [filterText, setFilterText] = useState("")
   const [filterDjMixText, setFilterDjMixText] = useState("")
 
-  function handleFilterTextInput(filterText) {
+  function handleFilterTextInput(filterText: string) {
     setFilterText(filterText)
   }
 
-  function handleDJFilterTextInput(filterText) {
+  function handleDJFilterTextInput(filterText: string) {
     setFilterDjMixText(filterText)
   }
 
