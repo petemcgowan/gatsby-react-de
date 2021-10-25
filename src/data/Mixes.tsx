@@ -1,5 +1,10 @@
 export const Mixes = [
   {
+    artist: "Boards Of Canada / Stereolab",
+    song: "Kid For Today (rmx)",
+    link: "https://bit.ly/3p4oDyB",
+  },
+  {
     artist: "BT Express",
     song: "Do It till youre satisfied (rmx)",
     link: "http://bit.ly/2sWYWoJ",

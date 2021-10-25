@@ -18,10 +18,14 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Playfair Display', serif;
   } */
 `
-
-const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
+interface Props {
+  // location: Location
+  title: string
+  children?: any
+}
+const Layout = ({ title, children }: Props) => {
+  // const rootPath = `${__PATH_PREFIX__}/`
+  // const isRootPath = location.pathname === rootPath
   let header
 
   // if (isRootPath) {
@@ -38,8 +42,9 @@ const Layout = ({ location, title, children }) => {
   //   )
   // }
 
+  //  attribute from global-wrapper div class ->   data-is-root-path={isRootPath}
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
+    <div className="global-wrapper">
       <GlobalStyle />
       <header className="global-header">{header}</header>
       <main>{children}</main>
@@ -53,3 +58,5 @@ const Layout = ({ location, title, children }) => {
 }
 
 export default Layout
+
+
