@@ -1,103 +1,98 @@
----
+## What the app is for
 
-<!-- <Pete: This is me creating from the BD template -->
+This React/Gatsby app is fundamentally a website where a DJ/producer displays what they've created, mixes they've done, downloads etc. Original goal was to have it as fully extensible, with all content driven externally. This extensibility is partially done using Gatsby's blog content system.
 
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+## Main app components
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+DJ Mixes section (Mix component)
+<img src="docs/images/dj-mixes-deg.png" width="100%" />
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+DJ Edits section (Mix component)
+<img src="docs/images/downloads-deg.png" width="100%" />
 
-## 🚀 Quick start
+Funk section (Blog Post component)
+<img src="docs/images/funk-deg.png" width="100%" />
 
-1.  **Create a Gatsby site.**
+House section (Blog Post component)
+<img src="docs/images/house-deg.png" width="100%" />
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+Techno section (Blog Post component)
+<img src="docs/images/techno-deg.png" width="100%" />
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+Main page (Index component)
+<img src="docs/images/main-deg.png" width="100%" />
 
-1.  **Start developing.**
+Socials component
+<img src="docs/images/socials-deg.png" width="100%" />
 
-    Navigate into your new site’s directory and start it up.
+Podcast 1 section
+<img src="docs/images/de-podcast-deg.png" width="100%" />
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+Podcast 2 section
+<img src="docs/images/ptu-podcast-deg.png" width="100%" />
 
-1.  **Open the source code and start editing!**
+## Technical details
 
-    Your site is now running at `http://localhost:8000`!
+- Gatsby
+- GraphQL
+- React JS / ES7 / Webpack
+- React Hooks
+- React Bootstrap
+- Styled components
+- Adobe Photoshop
+- AWS EC2 / S3 - This was originally hosted on AWS EC2, but on S3 cause it's cheaper 😎
+- Docker / Kubernetes - Also exists on Google Cloud / Docker / Kubernetes, will be live in this form soon
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
+# Gatsby markup structure
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+For the page content, look outside of the src directory to a folder called content/blog. This is where Gatsby stores it's "blog content". These are markdown pages which are picked up the src/templates/blog-post.js component in the app.
 
-## 🧐 What's inside?
+To achieve this one:
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+1. One adds gatsby-source-filesystem plugin to gatsby-config.js
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+module.exports = {
+plugins: [
+{
+resolve: `gatsby-source-filesystem`,
+options: {
+path: `${__dirname}/content/blog`,
+name: `blog`,
+},
+},
+],
+}
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+2.  Configure gatsby-transformer-remark, which recognises Markdown files and reads their content
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+3.  Create a folder in the /src directory of your Gatsby application called content/blog. Now create Markdown file inside it e.g. techno/index.md.
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+4.  TODO Explain how the index page and the blog posts connect through Frontmatter/GraphQL
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+# Podcast
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+This website also hosts a podcast!
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
+TODO Outline the structure, RSS, HTML files, how it sits in the static folder so it can be directly deployed etc.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+# Graphic design
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+TODO: Add in all the podcast graphic design files
 
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+## How the app is started
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+gatsby develop - for local running
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+gatsby build - to create the files necessary to deploy to a production environment
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+npm run develop - this calls the gatsby develop command so can be used also. I'm adding a -H 0.0.0.0 so I can check the app on my phone
 
-## 🎓 Learning Gatsby
+Default link the app runs at: `http://localhost:8000`!
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
+Where GraphQL can be found (when running): \_`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+## 🎓 Gatsby
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/).
 
-## 💫 Deploy
-
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/cloud/)
-
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+- **Code samples, head [to documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
