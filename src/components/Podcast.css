@@ -7,7 +7,29 @@
 }
 
 
-.Podcast td{
+/* .Podcast td{
   margin: 5px auto;
   padding: 0px 0px 5px 5px;
+} */
+
+
+.podContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-gap: 20px;
+}
+
+.linksContainer {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;  /*row axis*/
+  align-content: center;   /*col axis*/
+  /* grid-gap: 10px; */
+}
+
+.linkItem {
+  margin: 5px;
+  padding: 5px;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
