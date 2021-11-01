@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: react-gatsby-deployment
+spec:
+  selector:
+    matchLabels:
+      app: react
+  replicas: 1 # number of pods
+  template:
+    metadata:
+      labels:
+        app: react
+    spec:
+      containers:
+        - name: gatsby-docker-de
+          image: us.gcr.io/reactdockerde2/gatsby-react-de/gatsby-docker-de@sha256:e0b76f69fa91612b34bd69fceac17cd90868a9e301392312347b202210e6db64
+          ports:
+            - containerPort: 443
