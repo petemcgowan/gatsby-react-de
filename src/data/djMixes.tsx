@@ -88,4 +88,9 @@ export const djMixes = [
     song: "EP04 - 2021 Best Techno Festivals DJ Soundtrack",
     link: "https://dts.podtrac.com/redirect.mp3/electriccolour.club/mp3/PTU-04-Underground_Techno_2021_Best_Techno_Festivals_EP04.mp3",
   },
-]
+
+  {
+    artist: "Funk",
+    song: "EP12 - Old School 70s Funk",
+    link: "https://dts.podtrac.com/redirect.mp3/https://undergroundpodcast.s3.us-east-2.amazonaws.com/192/UHFT-12-Old_School_70s_Funk_Underground_Funk_EP12.mp3",
+  },]
