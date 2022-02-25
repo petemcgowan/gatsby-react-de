@@ -1,5 +1,6 @@
 ---
 name: "House"
+featuredImage: ../images/btnAppleMusic.png
 date: "2020-05-06T23:46:37.121Z"
 img: "../images/Housev4-(fish-eye,_noTitle500x500).jpg"
 imgAlt: "Fisheye view of people at a house festival"
@@ -11,6 +12,11 @@ djMixDownloads: false
 techno: false
 facts:
   [
+    {
+      source: "https://open.spotify.com/embed/album/2ZZ8XskExzRJ3T7e6pNJUE?utm_source=generator",
+      name: "name",
+      height: 220,
+    },
 
     {
       source: "https://open.spotify.com/embed?uri=spotify:user:1163531592:playlist:3F06NSn0Zf6tIIRcraeKe9&amp;size=detail&amp;theme=light&amp;show-count=1",
@@ -24,7 +30,7 @@ facts:
       height: 180,
     },
 
-{
+    {
       source: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/923486665&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=true&visual=true",
       name: "UltrafieldsMissy",
       height: 220,
