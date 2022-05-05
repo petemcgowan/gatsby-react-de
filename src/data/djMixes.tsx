@@ -93,4 +93,13 @@ export const djMixes = [
     artist: "Funk",
     song: "EP12 - Old School 70s Funk",
     link: "https://dts.podtrac.com/redirect.mp3/https://undergroundpodcast.s3.us-east-2.amazonaws.com/192/UHFT-12-Old_School_70s_Funk_Underground_Funk_EP12.mp3",
-  },]
+  },
+
+  {
+    artist: "Techno",
+    song: "EP05 - Driving Techno, Fast Hör club style",
+    link: "https://dts.podtrac.com/redirect.mp3/electriccolour.club/mp3/PTU-05-Fast_Driving_Hor_Techno_EP05.mp3",
+  },
+
+
+]
