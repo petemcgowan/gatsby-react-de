@@ -1,10 +1,12 @@
-.Podcast {
-  text-align: left;
+/* .Podcast {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  /*text-align: left;
   justify-content: left;
   margin: 5px auto;
   padding: 0px 0px 5px 5px;
-}
+} */
 
 
 /* .Podcast td{
@@ -14,22 +16,135 @@
 
 
 .podContainer {
-  display: grid;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* flex: 2; */
+  /*flex-wrap: wrap;*/
+  width: 100%;
+  background-color: #dfdfdf;
+  /*display: grid;
   grid-template-columns: auto auto auto auto auto auto;
-  grid-gap: 20px;
+  grid-gap: 20px;*/
+}
+
+.podLeftItem{
+  /* display: flex; */
+  /* flex: 1; */
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  /* max-width: 50px; */
+}
+
+.podImageContainer{
+  /* display: flex; */
+  /* flex: 1; */
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
 }
 
 .linksContainer {
-  display: grid;
-  grid-template-columns: auto;
-  justify-content: center;  /*row axis*/
-  align-content: center;   /*col axis*/
-  /* grid-gap: 10px; */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  flex-wrap: wrap;
+  /* flex: 1; */
+  margin-left: 20px;
+  max-height: 330px;
 }
 
+.podRightItem{
+  /* display: flex; */
+  /* flex: 1; */
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  /* max-width: 50px; */
+}
+
+
 .linkItem {
-  margin: 5px;
-  padding: 5px;
+  margin: 2px;
+  padding: 2px;
   justify-content: flex-start;
   align-content: flex-start;
 }
+
+
+
+
+
+/* TEMP FLEXBOX STUFF DELETE EVERYTHING BELOW  */
+
+.flexbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexbox-item {
+  width: 200px;
+  margin: 10px;
+  border: 3px solid #333;
+  background-color: #dfdfdf;
+}
+
+
+.flexbox-item-1 {
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-shrink: 0;
+  flex: 1 0 0;
+  min-height: 200px;
+  flex-shrink: 0;
+  align-self: flex-end;
+  order: 1;
+}
+
+.flexbox-item-2 {
+  min-height: 200px;
+  flex-grow: 2;
+  flex-basis: 0;
+  align-self: center;
+  order: 2;
+}
+
+.flexbox-item-3 {
+  min-height: 200px;
+  flex-grow: 1;
+  flex-basis: 0;
+  order: 3;
+}
+
+.flexbox-item-1 {
+  min-height: 100px;
+}
+
+.flexbox-item-2 {
+  min-height: 100px;
+}
+
+.flexbox-item-3 {
+  min-height: 100px;
+}
+
+.flexbox-container {
+  position: relative;
+  background-color: yellow;
+}
+
+
+.flexbox-item {
+  position: relative;
+  width: 200px;
+  margin: 10px;
+  border: 3px solid #333;
+  background-color: #dfdfdf;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+}
+
