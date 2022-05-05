@@ -144,8 +144,6 @@ const ProductsHeading = styled.div`
   color: #000;
 `
 
-// const ProductWrapper = styled.div`
-// `
 const ProductWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);

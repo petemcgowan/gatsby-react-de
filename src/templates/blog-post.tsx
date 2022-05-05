@@ -9,7 +9,7 @@ import NavbarDE from "../components/NavbarDE"
 
 import { podcasts } from "../data/podcasts";
 import {PodcastType} from "../interfaces/PodcastInterfaces";
-
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -36,6 +36,7 @@ const BlogPostTemplate = ({ data, pageContext }: Props)  => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = pageContext
   let Page = post.frontmatter
+  let featuredImgFluid = post.frontmatter.featuredImage//.childImageSharp.fluid
 
   let podcastInfo:PodcastType = podcasts[0]; // default podcast is house
   if (Page.techno) { // what podcast should be shown
@@ -94,15 +95,17 @@ const BlogPostTemplate = ({ data, pageContext }: Props)  => {
           <div className="Downloads">
             {Page.remixDownloads ? <DownloadsPage /> : ""}
           </div>
-          <div className="Podcast">{<Podcast podcastInfo={podcastInfo}  />}</div>
           {/* <div>{!Page.techno && <Podcast />}</div>
           <div>{Page.techno && <PodcastTechno />}</div> */}
 
           {/* </div> */}
         </section>
         <hr />
-        {/* <footer></footer> */}
       </article>
+      <footer>
+      <div /*className="Podcast"*/>{<Podcast podcastInfo={podcastInfo}  />}</div>
+
+      </footer>
       <nav className="blog-post-nav">
         <Social />
         <ul
@@ -166,6 +169,7 @@ export const pageQuery = graphql`
           name
           height
         }
+        featuredImage
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

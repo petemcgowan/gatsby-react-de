@@ -8,8 +8,8 @@
   filter: none;
 }
 .blog-post:hover img {
-  filter: grayscale();
-  transition: 0.4s filter ease;
+  filter: contrast(1.25);;
+  transition: 0.6s filter ease;
 }
 .blog-post h1 {
   text-align: center;
