@@ -1,4 +1,5 @@
 import React from "react"
+import "./MixTable.css";
 
 interface SearchBarProps {
   filterText: string;
@@ -18,7 +19,7 @@ const SearchBar =  (props: SearchBarProps) => {
   return (
     <form>
       <input
-        className="form-control"
+        className="search-form-control"
         type="text"
         placeholder="Search..."
         value={props.filterText}

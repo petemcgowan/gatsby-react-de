@@ -4,13 +4,8 @@ body {
   /* font-family: "Source Sans Pro"; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(
-    100deg,
-    rgba(196, 196, 196, 0.8) 30%,
-    #b0eae8 120%
-  );
+  background: linear-gradient(100deg, rgba(4, 28, 52, 0.79) 30%, #21043b 120%);
 }
-
 
 /* row {
   display: flex;
@@ -24,7 +19,7 @@ body {
   width: 100%;
   filter: none;
   /* this is how round the img circles are */
-  border-radius: 35%  !important;
+  border-radius: 35% !important;
   /* ...which apparently exposes a Gatsby bug so I have to include this line for production*/
   overflow: hidden;
 
@@ -38,7 +33,7 @@ body {
 .Pages .underline {
   text-decoration: none;
   border: 4px solid transparent;
-/*  display: inline-block;*/
+  /*  display: inline-block;*/
   vertical-align: top;
   line-height: 36px;
   text-transform: uppercase;

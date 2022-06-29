@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
+    background-color: "000";
   }
 /*
   h1, h2, h3, h4, h5, h6 {

@@ -8,12 +8,10 @@
   padding: 0px 0px 5px 5px;
 } */
 
-
 /* .Podcast td{
   margin: 5px auto;
   padding: 0px 0px 5px 5px;
 } */
-
 
 .podContainer {
   display: flex;
@@ -23,13 +21,14 @@
   /* flex: 2; */
   /*flex-wrap: wrap;*/
   width: 100%;
-  background-color: #dfdfdf;
+  /* background-color: #282424; */
+  /* background: linear-gradient(100deg, rgba(4, 28, 52, 0.79) 30%, #21043b 120%); */
   /*display: grid;
   grid-template-columns: auto auto auto auto auto auto;
   grid-gap: 20px;*/
 }
 
-.podLeftItem{
+.podLeftItem {
   /* display: flex; */
   /* flex: 1; */
   align-items: center;
@@ -38,7 +37,7 @@
   /* max-width: 50px; */
 }
 
-.podImageContainer{
+.podImageContainer {
   /* display: flex; */
   /* flex: 1; */
   align-items: center;
@@ -56,7 +55,7 @@
   max-height: 330px;
 }
 
-.podRightItem{
+.podRightItem {
   /* display: flex; */
   /* flex: 1; */
   align-items: center;
@@ -65,17 +64,12 @@
   /* max-width: 50px; */
 }
 
-
 .linkItem {
   margin: 2px;
   padding: 2px;
   justify-content: flex-start;
   align-content: flex-start;
 }
-
-
-
-
 
 /* TEMP FLEXBOX STUFF DELETE EVERYTHING BELOW  */
 
@@ -89,9 +83,8 @@
   width: 200px;
   margin: 10px;
   border: 3px solid #333;
-  background-color: #dfdfdf;
+  /* background-color: #dfdfdf; */
 }
-
 
 .flexbox-item-1 {
   flex-grow: 1;
@@ -136,15 +129,13 @@
   background-color: yellow;
 }
 
-
 .flexbox-item {
   position: relative;
   width: 200px;
   margin: 10px;
   border: 3px solid #333;
-  background-color: #dfdfdf;
+  /* background-color: #dfdfdf; */
   font-size: 100px;
   display: flex;
   justify-content: center;
 }
-

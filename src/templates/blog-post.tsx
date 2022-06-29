@@ -73,12 +73,16 @@ const BlogPostTemplate = ({ data, pageContext }: Props)  => {
                   <h2 className="card-title">{Page.name}</h2>
                 </div>
               </div>
-            </div> */}
+            </div>
+
+            className="list-group-item backToBlack bootstrap-dark" */
+
+            }
 
           <h1>{Page.title}</h1>
           <ul className="list-group list-group-flush">
             {Page.facts.map((fact:FactsType, i:number) => (
-              <li className="list-group-item" key={i}>
+              <li  key={i}>
                 <iframe
                   src={fact.source}
                   width="100%"
