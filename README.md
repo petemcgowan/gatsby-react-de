@@ -16,12 +16,6 @@ Main page (Index component)
 Main (mobile view) (Index component)
 <img src="docs/images/main-mobile-view-deg.png" width="100%" />
 
-DJ Mixes section (Mix component)
-<img src="docs/images/dj-mixes-deg.png" width="100%" />
-
-DJ Edits section (Mix component)
-<img src="docs/images/downloads-deg.png" width="100%" />
-
 Funk section (Blog Post component)
 <img src="docs/images/funk-deg.png" width="100%" />
 
@@ -36,6 +30,12 @@ Podcast 1 section
 
 Podcast 2 section
 <img src="docs/images/ptu-podcast-deg.png" width="100%" />
+
+DJ Mixes section (Mix component)
+<img src="docs/images/dj-mixes-deg.png" width="100%" />
+
+DJ Edits section (Mix component)
+<img src="docs/images/downloads-deg.png" width="100%" />
 
 ## Technical details
 
