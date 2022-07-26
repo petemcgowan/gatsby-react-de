@@ -6,7 +6,9 @@ This React/Gatsby app is fundamentally a website where a DJ/producer displays wh
 
 <img src="docs/images/de-com-gatbsy-architecture.png" width="100%" />
 
-## Gatsby vs de.com Architecture
+## de.com Component Architecture
+
+<img src="docs/images/de-com-component-architecture.png" width="100%" />
 
 ## Main app components
 
