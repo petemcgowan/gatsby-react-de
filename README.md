@@ -10,6 +10,12 @@ This React/Gatsby app is fundamentally a website where a DJ/producer displays wh
 
 ## Main app components
 
+Main page (Index component)
+<img src="docs/images/main-deg.png" width="100%" />
+
+Main (mobile view) (Index component)
+<img src="docs/images/main-mobile-view-deg.png" width="100%" />
+
 DJ Mixes section (Mix component)
 <img src="docs/images/dj-mixes-deg.png" width="100%" />
 
@@ -24,12 +30,6 @@ House section (Blog Post component)
 
 Techno section (Blog Post component)
 <img src="docs/images/techno-deg.png" width="100%" />
-
-Main page (Index component)
-<img src="docs/images/main-deg.png" width="100%" />
-
-Socials component
-<img src="docs/images/socials-deg.png" width="100%" />
 
 Podcast 1 section
 <img src="docs/images/de-podcast-deg.png" width="100%" />
