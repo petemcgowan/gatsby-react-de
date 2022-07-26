@@ -2,6 +2,12 @@
 
 This React/Gatsby app is fundamentally a website where a DJ/producer displays what they've created, mixes they've done, downloads etc. Original goal was to have it as fully extensible, with all content driven externally. This extensibility is partially done using Gatsby's blog content system.
 
+## de.com Architecture
+
+<img src="docs/images/de-com-gatbsy-architecture.png" width="100%" />
+
+## Gatsby vs de.com Architecture
+
 ## Main app components
 
 DJ Mixes section (Mix component)
