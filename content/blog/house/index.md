@@ -13,13 +13,13 @@ techno: false
 facts:
   [
     {
-      source: "https://open.spotify.com/embed/album/2ZZ8XskExzRJ3T7e6pNJUE?utm_source=generator",
+      source: "https://open.spotify.com/embed?uri=spotify:user:1163531592:playlist:3F06NSn0Zf6tIIRcraeKe9&amp;size=detail&amp;theme=light&amp;show-count=1",
       name: "name",
       height: 220,
     },
 
     {
-      source: "https://open.spotify.com/embed?uri=spotify:user:1163531592:playlist:3F06NSn0Zf6tIIRcraeKe9&amp;size=detail&amp;theme=light&amp;show-count=1",
+      source: "https://open.spotify.com/embed/album/2ZZ8XskExzRJ3T7e6pNJUE?utm_source=generator",
       name: "name",
       height: 220,
     },
